@@ -68,5 +68,5 @@ For test tf_serving, go back to gpt_conver container and enter the command below
 $ python tf_serving_test.py
 ```
 
-You can get result with vector form
+You can get result with vector form  
 Use that vector form result to generate text (refer to code in tf_model_test.py)
