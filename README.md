@@ -18,7 +18,7 @@ Now, you are in docker container to convert pytorch to tensorflow
 
 ## pytorch -> onnx
 
-In docker container, enter the commend below
+In docker container, enter the command below
 
 ```bash 
 $ python pytorch_to_onnx.py
@@ -30,7 +30,7 @@ In that folder, you can find the model.onnx file
 ## onnx -> tensorflow
 
 Now, you have model.onnx file  
-To convert onnx to tensorflow, enter the commend below  
+To convert onnx to tensorflow, enter the command below  
 
 ```bash 
 $ python onnx_to_tensorflow.py
