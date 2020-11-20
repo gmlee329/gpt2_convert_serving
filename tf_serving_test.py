@@ -7,7 +7,7 @@ import requests
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 def keras_model_predict(prompt):
-    URL = "https://625ff7a4d9d3.ngrok.io/v1/models/keras:predict"
+    URL = "https://localhost:8501/v1/models/keras:predict"
 
     input_torch = tokenizer.encode(prompt, add_special_tokens=True, return_tensors='pt')
     np_tensor = input_torch.numpy()
