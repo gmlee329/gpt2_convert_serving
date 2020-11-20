@@ -36,7 +36,7 @@ To convert onnx to tensorflow, enter the command below
 $ python onnx_to_tensorflow.py
 ```
 
-In the test_gpt2-lm-head folder, the model folder will be maded  
+The model folder will be maded in the test_gpt2-lm-head folder  
 In the model folder, there is assets, variables, saved_model.pb
 
 ## test converted tensorflow model's output
