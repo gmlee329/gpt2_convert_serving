@@ -1,0 +1,13 @@
+FROM tensorflow/serving:latest-gpu
+
+ARG version_no=1
+ENV MODEL_NAME keras 
+
+RUN apt-get update
+CMD /bin/bash
+
+RUN mkdir -p /models/${MODEL_NAME}
+
+COPY ./test_gpt2-lm-head/model/ /models/${MODEL_NAME}/${version_no}/ 
+
+EXPOSE 8501

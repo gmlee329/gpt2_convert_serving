@@ -1,0 +1,25 @@
+FROM pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
+
+RUN apt-get update && \
+    apt-get install -y && \
+    apt-get install -y apt-utils wget
+
+RUN pip install --upgrade pip
+RUN pip install transformers \
+    tensorboard \
+    wandb
+
+RUN pip install flask && pip install waitress
+RUN pip install protobuf
+RUN pip install numpy
+RUN apt-get install -y protobuf-compiler libprotoc-dev
+RUN pip install onnx
+RUN apt-get install -y git
+RUN pip install git+https://github.com/onnx/onnx-tensorflow.git
+RUN pip install onnxruntime
+RUN pip install tensorflow-gpu
+RUN pip install tensorflow-addons
+WORKDIR /gpt_serving/
+COPY . .
+
+EXPOSE 80
